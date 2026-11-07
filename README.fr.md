@@ -14,6 +14,17 @@ simplement une tâche à faire.
 Pour ce qui relève vraiment du calendrier — le loyer le 1er, les poubelles un
 dimanche sur deux — Ricochet fait aussi des **rendez-vous**.
 
+<p>
+  <img src="docs/captures/fr/1.webp" width="30%" alt="La liste des tâches, triée par urgence, chaque carte montrant sa photo">
+  <img src="docs/captures/fr/2.webp" width="30%" alt="L'écran de détail d'une tâche, sa photo en plein écran, avec un grand bouton Fait">
+  <img src="docs/captures/fr/3.webp" width="30%" alt="L'historique d'une tâche, chaque accomplissement avec son avance ou son retard">
+</p>
+<p>
+  <img src="docs/captures/fr/4.webp" width="30%" alt="Le calendrier du mois, avec ce qui a été fait et ce qui vient">
+  <img src="docs/captures/fr/5.webp" width="30%" alt="La modification d'un rendez-vous : toutes les 2 semaines le lundi à 19 h">
+  <img src="docs/captures/fr/6.webp" width="30%" alt="L'écran de détail d'un rendez-vous sans photo">
+</p>
+
 ## Fonctions
 
 - **Deux sortes de rappels**

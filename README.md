@@ -12,6 +12,17 @@ task forgotten for a month is simply one task that is due.
 For things that do belong to the calendar — rent on the 1st, bins every other
 Sunday — Ricochet also does **appointments**.
 
+<p>
+  <img src="docs/captures/en/1.webp" width="30%" alt="The task list, sorted by urgency, each card showing its photo">
+  <img src="docs/captures/en/2.webp" width="30%" alt="A task's detail screen, its photo full-screen, with a large Done button">
+  <img src="docs/captures/en/3.webp" width="30%" alt="A task's history, each completion with how early or late it was">
+</p>
+<p>
+  <img src="docs/captures/en/4.webp" width="30%" alt="The month calendar, with what was done and what is coming">
+  <img src="docs/captures/en/5.webp" width="30%" alt="Editing an appointment: every 2 weeks on Monday at 19:00">
+  <img src="docs/captures/en/6.webp" width="30%" alt="The detail screen of an appointment without a photo">
+</p>
+
 ## Features
 
 - **Two kinds of reminders**
