@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Le pendant sombre de values/themes.xml : sans lui, la fenetre s'ouvre en
+         clair avant que Compose ne peigne, et l'ecran clignote en mode sombre. -->
+    <style name="Theme.Ricochet" parent="android:Theme.Material.NoActionBar" />
+</resources>

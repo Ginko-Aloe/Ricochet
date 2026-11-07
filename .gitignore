@@ -1,0 +1,16 @@
+*.iml
+.gradle
+# Reglages d'Android Studio, propres a chaque machine.
+/.idea/
+/local.properties
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+# Prive : suivi dans l'archive privee, jamais publie. Un depot neuf cree a partir de
+# ces fichiers les ecartera de lui-meme.
+/CLAUDE.md
+/docs/journal.md
+/docs/etude-waterme.md

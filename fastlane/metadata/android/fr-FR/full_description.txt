@@ -1,0 +1,24 @@
+<p>Arroser les plantes tous les 3 jours. Si on le fait avec 2 jours de retard, le prochain arrosage est dû 3 jours <i>après l'arrosage</i> — pas demain. Chaque fois qu'on marque une tâche faite, son échéance <i>ricoche</i> une période plus loin. Pas d'arriéré d'occasions manquées, pas de culpabilité.</p>
+
+<p>Pour ce qui relève vraiment du calendrier — le loyer le 1er, les poubelles un dimanche sur deux — Ricochet fait aussi des <b>rendez-vous</b>.</p>
+
+<p><b>Deux sortes de rappels</b></p>
+<ul>
+<li><b>Ricochet</b> : dû une période après la dernière fois, d'une heure à plusieurs semaines — une pilule toutes les 8 heures comme un appel tous les quinze jours.</li>
+<li><b>Rendez-vous</b> : jours de la semaine, jours du mois, le premier lundi ou le dernier vendredi, ou une date annuelle ; toutes les N semaines, mois ou années ; à l'heure choisie. Le faire un peu en avance compte pour la date qui vient. Les dates manquées sont pardonnées, ou comptées si on préfère.</li>
+</ul>
+
+<p><b>Et aussi</b></p>
+<ul>
+<li>Une liste triée par urgence, chaque carte avec sa photo. Balayer une carte la marque faite, avec annulation.</li>
+<li>Un écran de détail avec la photo en plein écran.</li>
+<li>L'historique de chaque accomplissement, son avance ou son retard, avec corrections.</li>
+<li>Un calendrier du mois : ce qui vient, et ce qui a été fait.</li>
+<li>Des notifications à l'heure exacte, avec une action Fait et un report.</li>
+<li>Sauvegarde dans une archive zip, et export de l'historique en CSV.</li>
+<li>En français et en anglais.</li>
+</ul>
+
+<p><b>Vie privée</b> : aucun accès au réseau, ni compte, ni pistage, ni publicité. Vos tâches et vos photos restent sur votre téléphone.</p>
+
+<p>L'allure doit beaucoup à Water Me d'Andrin Bertschi : les photos derrière chaque carte, le balayage pour accomplir, le détail en plein écran. Merci.</p>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Français : la langue d'origine de Ricochet. L'anglais, langue par défaut, est
+  dans values/. Les pluriels français ont trois formes pour Android : « one » vaut
+  pour 0 et 1, « many » pour les tres grands nombres.
+
+  ImpliedQuantity est ignore a dessein : « Chaque heure », « semaine » n'ont pas de
+  nombre, et l'application ne les demande jamais pour 0.
+-->
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ImpliedQuantity">
+    <!-- Commun -->
+    <string name="annuler">Annuler</string>
+    <string name="valider">Valider</string>
+    <string name="suivant">Suivant</string>
+    <string name="enregistrer">Enregistrer</string>
+    <string name="supprimer">Supprimer</string>
+    <string name="retour">Retour</string>
+    <string name="fait">Fait</string>
+    <string name="tache_accomplie">« %1$s » accomplie</string>
+    <string name="a_quelle_heure">À quelle heure ?</string>
+    <string name="echec_motif">%1$s : %2$s</string>
+
+    <!-- Liste -->
+    <string name="liste_vide">Aucune tâche pour l\'instant.</string>
+    <string name="donnees">Données</string>
+    <string name="exporter">Exporter…</string>
+    <string name="importer">Importer…</string>
+    <string name="exporter_csv">Exporter l\'historique (CSV)…</string>
+    <string name="annuler_import">Annuler le dernier import…</string>
+    <string name="annuler_import_titre">Annuler le dernier import ?</string>
+    <string name="annuler_import_texte">Les tâches et leurs images reviendront à leur état d\'avant l\'import du %1$s. Ce qui a été fait depuis sera perdu.</string>
+    <string name="revenir_en_arriere">Revenir en arrière</string>
+    <string name="garder">Garder</string>
+    <string name="nouvelle_tache">Nouvelle tâche</string>
+    <string name="calendrier">Calendrier</string>
+    <string name="marquer_fait">Marquer comme fait</string>
+    <string name="en_retard">En retard</string>
+
+    <!-- Sauvegarde et export -->
+    <string name="sauvegarde_enregistree">Sauvegarde enregistrée.</string>
+    <string name="echec_sauvegarde">Échec de la sauvegarde</string>
+    <string name="sauvegarde_restauree">Sauvegarde restaurée.</string>
+    <string name="archive_illisible">Archive illisible</string>
+    <string name="historique_exporte">Historique exporté.</string>
+    <string name="echec_export">Échec de l\'export</string>
+    <string name="import_annule">Import annulé.</string>
+    <string name="echec_annulation">Échec de l\'annulation</string>
+
+    <!-- Édition -->
+    <string name="modifier">Modifier</string>
+    <string name="nom_tache">Nom de la tâche</string>
+    <string name="aucune_illustration">Aucune illustration</string>
+    <string name="galerie">Galerie</string>
+    <string name="photo">Photo</string>
+    <string name="retirer">Retirer</string>
+    <string name="sorte_ricochet">Ricochet</string>
+    <string name="sorte_rendez_vous">Rendez-vous</string>
+    <string name="a_refaire_tous_les">À refaire tous les…</string>
+    <string name="nombre">Nombre</string>
+    <string name="unite_heures">heures</string>
+    <string name="unite_jours">jours</string>
+    <string name="unite_semaines">semaines</string>
+    <string name="explication_ricochet">L\'échéance repartira de chaque accomplissement, jamais de l\'échéance précédente.</string>
+    <string name="prochain">Prochain : %1$s à %2$s</string>
+    <string name="choisir_un_jour">Choisissez au moins un jour.</string>
+    <string name="explication_rendez_vous">L\'échéance suit le calendrier, que la tâche ait été faite ou non. Un « Fait » compte pour le rendez-vous le plus proche.</string>
+    <string name="supprimer_tache">Supprimer cette tâche</string>
+
+    <!-- Saisie d'un rendez-vous -->
+    <string name="tous_les">Tous les</string>
+    <plurals name="unite_semaine">
+        <item quantity="one">semaine</item>
+        <item quantity="many">semaines</item>
+        <item quantity="other">semaines</item>
+    </plurals>
+    <plurals name="unite_mois">
+        <item quantity="one">mois</item>
+        <item quantity="many">mois</item>
+        <item quantity="other">mois</item>
+    </plurals>
+    <plurals name="unite_an">
+        <item quantity="one">an</item>
+        <item quantity="many">ans</item>
+        <item quantity="other">ans</item>
+    </plurals>
+    <string name="certains_jours">Certains jours</string>
+    <string name="jour_de_semaine">Un jour de semaine</string>
+    <string name="dernier">Dernier</string>
+    <string name="le_rang">Le…</string>
+    <string name="date_annuelle_bouton">Le %1$s %2$s</string>
+    <string name="a_heure">À %1$s</string>
+    <string name="tenir_le_compte">Tenir le compte des oublis</string>
+    <string name="tenir_le_compte_explication">Chaque rendez-vous manqué reste à rattraper, du plus ancien au plus récent.</string>
+
+    <!-- Détail et historique -->
+    <string name="voir_historique">Voir l\'historique</string>
+    <string name="historique">Historique</string>
+    <string name="ajouter_accomplissement">Ajouter un accomplissement</string>
+    <string name="jamais_faite_pour_l_instant">Jamais faite pour l\'instant.</string>
+    <string name="modifier_la_date">Modifier la date…</string>
+    <string name="accomplissement_retire">Accomplissement retiré</string>
+    <string name="accomplissement_ajoute">Accomplissement ajouté</string>
+    <string name="date_corrigee">Date corrigée</string>
+    <string name="message_et_echeance">%1$s · échéance : %2$s</string>
+    <string name="aide_historique_ricochet">Touchez une ligne pour corriger sa date ou la retirer. Écarts mesurés avec la période actuelle : %1$s.</string>
+    <string name="aide_historique_rendez_vous">Touchez une ligne pour corriger sa date ou la retirer. Écarts mesurés avec le calendrier actuel : %1$s.</string>
+
+    <!-- Calendrier -->
+    <string name="aujourd_hui">Aujourd\'hui</string>
+    <string name="demain">Demain</string>
+    <string name="hier">Hier</string>
+    <string name="rien_ce_jour">Rien ce jour-là.</string>
+    <string name="marque_projection">Vers %1$s, si elle est faite à l\'heure</string>
+    <string name="marque_fait">Faite à %1$s</string>
+    <string name="marque_retard">En retard · due le %1$s à %2$s</string>
+    <string name="jour_complet">%1$s %2$s %3$s</string>
+
+    <!-- Échéances et durées -->
+    <string name="dans">Dans %1$s</string>
+    <string name="a_faire_maintenant">À faire maintenant</string>
+    <string name="en_retard_de">En retard de %1$s</string>
+    <string name="en_avance_de">En avance de %1$s</string>
+    <string name="a_l_heure">À l\'heure</string>
+    <string name="moins_d_une_minute">moins d\'une minute</string>
+    <plurals name="duree_jours">
+        <item quantity="one">%d jour</item>
+        <item quantity="many">%d jours</item>
+        <item quantity="other">%d jours</item>
+    </plurals>
+    <plurals name="duree_heures">
+        <item quantity="one">%d heure</item>
+        <item quantity="many">%d heures</item>
+        <item quantity="other">%d heures</item>
+    </plurals>
+    <plurals name="duree_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="many">%d minutes</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <string name="echeance_jamais_faite">%1$s · jamais faite</string>
+    <string name="jamais_faite">Jamais faite</string>
+    <string name="faite_il_y_a">Faite il y a %1$s</string>
+    <plurals name="periode_heures">
+        <item quantity="one">Chaque heure</item>
+        <item quantity="many">Toutes les %d heures</item>
+        <item quantity="other">Toutes les %d heures</item>
+    </plurals>
+    <plurals name="periode_jours">
+        <item quantity="one">Chaque jour</item>
+        <item quantity="many">Tous les %d jours</item>
+        <item quantity="other">Tous les %d jours</item>
+    </plurals>
+    <plurals name="periode_semaines">
+        <item quantity="one">Chaque semaine</item>
+        <item quantity="many">Toutes les %d semaines</item>
+        <item quantity="other">Toutes les %d semaines</item>
+    </plurals>
+    <string name="motif_date_historique">EEEE d MMMM yyyy \'à\' HH:mm</string>
+
+    <!-- Les rendez-vous en mots -->
+    <string name="chaque_jour_a">Chaque jour à %1$s</string>
+    <string name="rythme_rendez_vous">%1$s, %2$s à %3$s</string>
+    <plurals name="cadence_semaines">
+        <item quantity="one">Chaque semaine</item>
+        <item quantity="many">Toutes les %d semaines</item>
+        <item quantity="other">Toutes les %d semaines</item>
+    </plurals>
+    <plurals name="cadence_mois">
+        <item quantity="one">Chaque mois</item>
+        <item quantity="many">Tous les %d mois</item>
+        <item quantity="other">Tous les %d mois</item>
+    </plurals>
+    <plurals name="cadence_ans">
+        <item quantity="one">Chaque année</item>
+        <item quantity="many">Tous les %d ans</item>
+        <item quantity="other">Tous les %d ans</item>
+    </plurals>
+    <string name="jour_de_la_semaine">le %1$s</string>
+    <string name="le_dernier_jour">le dernier jour</string>
+    <plurals name="jour_du_mois">
+        <item quantity="one">le %der</item>
+        <item quantity="many">le %d</item>
+        <item quantity="other">le %d</item>
+    </plurals>
+    <string name="rang_1">1er</string>
+    <string name="rang_2">2e</string>
+    <string name="rang_3">3e</string>
+    <string name="rang_4">4e</string>
+    <string name="rang_dernier">dernier</string>
+    <string name="position">le %1$s %2$s</string>
+    <string name="date_annuelle">le %1$s %2$s</string>
+    <plurals name="numero_jour">
+        <item quantity="one">%der</item>
+        <item quantity="many">%d</item>
+        <item quantity="other">%d</item>
+    </plurals>
+    <string name="liste_et">%1$s et %2$s</string>
+    <string name="heure_pile">%1$d h</string>
+    <string name="heure_minutes">%1$d h %2$02d</string>
+    <string name="date_courte">%1$s %2$s</string>
+    <string name="date_courte_jour">%1$s %2$s %3$s</string>
+    <string name="echeance_et_date">%1$s · %2$s</string>
+    <string name="echeance_depuis">%1$s · depuis le %2$s</string>
+    <plurals name="oublis">
+        <item quantity="one">%d oubli</item>
+        <item quantity="many">%d oublis</item>
+        <item quantity="other">%d oublis</item>
+    </plurals>
+    <string name="avant_ce_calendrier">Avant ce calendrier</string>
+    <string name="pour_le">Pour le %1$s · %2$s</string>
+
+    <!-- Notifications -->
+    <string name="canal_nom">Échéances</string>
+    <string name="canal_description">Rappels des tâches arrivées à échéance.</string>
+    <string name="resume_texte">Des tâches sont à faire.</string>
+</resources>

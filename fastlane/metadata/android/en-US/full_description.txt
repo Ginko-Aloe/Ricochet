@@ -1,0 +1,24 @@
+<p>Water the plants every 3 days. If you do it 2 days late, the next watering is due 3 days <i>after you watered</i> — not tomorrow. Every time you mark a task done, its due date <i>ricochets</i> one period further. No backlog of missed occurrences, no guilt.</p>
+
+<p>For things that do belong to the calendar — rent on the 1st, bins every other Sunday — Ricochet also does <b>appointments</b>.</p>
+
+<p><b>Two kinds of reminders</b></p>
+<ul>
+<li><b>Ricochet</b>: due one period after it was last done, from one hour to many weeks — a pill every 8 hours as well as a call every fortnight.</li>
+<li><b>Appointment</b>: weekdays, days of the month, the first Monday or last Friday, or a yearly date; every N weeks, months or years; at the time you choose. Doing it a bit early counts for the coming date. Missed dates are forgiven, or kept count of if you prefer.</li>
+</ul>
+
+<p><b>Also</b></p>
+<ul>
+<li>A list sorted by urgency, each card showing its photo. Swipe a card to mark it done, with undo.</li>
+<li>A detail screen with the photo full-screen.</li>
+<li>History of every completion, how early or late it was, with corrections.</li>
+<li>A month calendar of what is coming and what was done.</li>
+<li>Exact-time notifications with a Done action and a snooze.</li>
+<li>Backup as a zip archive, and export of the history as CSV.</li>
+<li>English and French.</li>
+</ul>
+
+<p><b>Privacy</b>: no network access, no account, no tracking, no ads. Your tasks and photos stay on your phone.</p>
+
+<p>The look owes much to Water Me by Andrin Bertschi: photos behind each card, swipe to complete, full-screen detail. Thank you.</p>

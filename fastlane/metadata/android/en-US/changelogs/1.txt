@@ -1,0 +1,1 @@
+First release: Ricochets and appointments, history with corrections, month calendar, CSV export, English and French.

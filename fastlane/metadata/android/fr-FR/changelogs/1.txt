@@ -1,0 +1,1 @@
+Première version : Ricochets et rendez-vous, historique corrigeable, calendrier du mois, export CSV, français et anglais.

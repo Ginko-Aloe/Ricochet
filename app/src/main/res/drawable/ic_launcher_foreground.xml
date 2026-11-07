@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Galet au-dessus de ses ondes, vu de biais (variante D, « ondes ouvertes »).
+  Tout tient dans la zone sûre de 66 dp au centre de la grille adaptative de 108.
+  La couche monochrome reprend le même tracé : voir ic_launcher_monochrome.xml.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Les ondes : trois arcs ouverts vers le spectateur, la plus lointaine plus sombre. -->
+    <path
+        android:pathData="M26,64A28,8 0,0 0,82 64"
+        android:strokeWidth="4.5"
+        android:strokeColor="#FF5D6E7B"
+        android:strokeLineCap="round" />
+    <path
+        android:pathData="M35,64A19,5.5 0,0 0,73 64"
+        android:strokeWidth="4.5"
+        android:strokeColor="#FF93A5B2"
+        android:strokeLineCap="round" />
+    <path
+        android:pathData="M44,64A10,3 0,0 0,64 64"
+        android:strokeWidth="4.5"
+        android:strokeColor="#FF93A5B2"
+        android:strokeLineCap="round" />
+    <!-- Le galet, ocre, avec son reflet. -->
+    <group
+        android:pivotX="54"
+        android:pivotY="45"
+        android:rotation="-14">
+        <path
+            android:fillColor="#FFC98A3C"
+            android:pathData="M39,45a15,9.5 0,1 0,30 0a15,9.5 0,1 0,-30 0z" />
+    </group>
+    <group
+        android:pivotX="49.5"
+        android:pivotY="41.5"
+        android:rotation="-14">
+        <path
+            android:fillColor="#FFE6B677"
+            android:pathData="M43,41.5a6.5,2.6 0,1 0,13 0a6.5,2.6 0,1 0,-13 0z" />
+    </group>
+</vector>

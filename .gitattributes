@@ -1,0 +1,8 @@
+# Fins de ligne LF partout, quelle que soit la machine : une construction
+# reproductible suppose que chacun parte des memes fichiers, octet pour octet.
+* text=auto eol=lf
+*.bat text eol=crlf
+*.jar binary
+*.png binary
+*.jpg binary
+*.webp binary

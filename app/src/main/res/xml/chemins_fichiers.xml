@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Ce que le fournisseur accepte de partager : rien d'autre que le dossier des
+  illustrations, et seulement pour que la camera puisse y ecrire la photo qu'on
+  lui demande.
+-->
+<paths>
+    <files-path name="images" path="images/" />
+</paths>

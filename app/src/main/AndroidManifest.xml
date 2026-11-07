@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <!--
+         POST_NOTIFICATIONS se demande a l'execution depuis Android 13.
+         USE_EXACT_ALARM est accordee a l'installation aux applications dont le
+         rappel a l'heure dite est la fonction meme : c'est exactement notre cas,
+         et cela evite d'envoyer l'utilisateur dans les reglages systeme.
+    -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Ricochet">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Ricochet"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+             La camera ecrit directement dans notre dossier prive : on lui remet
+             une URI de contenu sur un fichier qu'on a cree, plutot que de passer
+             par le stockage partage. Aucune permission n'est alors necessaire.
+        -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fichiers"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/chemins_fichiers" />
+        </provider>
+        <!-- Declenche par nos propres alarmes et par les boutons des notifications. -->
+        <receiver
+            android:name=".rappels.RecepteurRappel"
+            android:exported="false" />
+
+        <!-- Expose au systeme, seul emetteur de BOOT_COMPLETED. -->
+        <receiver
+            android:name=".rappels.RecepteurDemarrage"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

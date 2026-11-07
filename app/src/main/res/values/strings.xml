@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Anglais : la langue par defaut, montree a tout telephone dont Ricochet ne connait
+  pas la langue. Le francais est dans values-fr/. Les commentaires restent en
+  francais, comme tout le depot ; seules les chaines sont en anglais.
+-->
+<resources>
+    <string name="app_name" translatable="false">Ricochet</string>
+
+    <!-- Commun -->
+    <string name="annuler">Cancel</string>
+    <string name="valider">OK</string>
+    <string name="suivant">Next</string>
+    <string name="enregistrer">Save</string>
+    <string name="supprimer">Delete</string>
+    <string name="retour">Back</string>
+    <string name="fait">Done</string>
+    <string name="tache_accomplie">“%1$s” done</string>
+    <string name="a_quelle_heure">At what time?</string>
+    <string name="echec_motif">%1$s: %2$s</string>
+
+    <!-- Liste -->
+    <string name="liste_vide">No tasks yet.</string>
+    <string name="donnees">Data</string>
+    <string name="exporter">Export…</string>
+    <string name="importer">Import…</string>
+    <string name="exporter_csv">Export history (CSV)…</string>
+    <string name="annuler_import">Undo last import…</string>
+    <string name="annuler_import_titre">Undo the last import?</string>
+    <string name="annuler_import_texte">Tasks and their pictures will go back to how they were before the import of %1$s. Anything done since will be lost.</string>
+    <string name="revenir_en_arriere">Go back</string>
+    <string name="garder">Keep</string>
+    <string name="nouvelle_tache">New task</string>
+    <string name="calendrier">Calendar</string>
+    <string name="marquer_fait">Mark as done</string>
+    <string name="en_retard">Overdue</string>
+
+    <!-- Sauvegarde et export -->
+    <string name="sauvegarde_enregistree">Backup saved.</string>
+    <string name="echec_sauvegarde">Backup failed</string>
+    <string name="sauvegarde_restauree">Backup restored.</string>
+    <string name="archive_illisible">Unreadable archive</string>
+    <string name="historique_exporte">History exported.</string>
+    <string name="echec_export">Export failed</string>
+    <string name="import_annule">Import undone.</string>
+    <string name="echec_annulation">Undo failed</string>
+
+    <!-- Édition -->
+    <string name="modifier">Edit</string>
+    <string name="nom_tache">Task name</string>
+    <string name="aucune_illustration">No picture</string>
+    <string name="galerie">Gallery</string>
+    <string name="photo">Camera</string>
+    <string name="retirer">Remove</string>
+    <string name="sorte_ricochet">Ricochet</string>
+    <string name="sorte_rendez_vous">Appointment</string>
+    <string name="a_refaire_tous_les">Repeat every…</string>
+    <string name="nombre">Number</string>
+    <string name="unite_heures">hours</string>
+    <string name="unite_jours">days</string>
+    <string name="unite_semaines">weeks</string>
+    <string name="explication_ricochet">The next due date will count from each time it is done, never from the previous due date.</string>
+    <string name="prochain">Next: %1$s at %2$s</string>
+    <string name="choisir_un_jour">Pick at least one day.</string>
+    <string name="explication_rendez_vous">The due date follows the calendar, whether the task was done or not. “Done” counts for the nearest appointment.</string>
+    <string name="supprimer_tache">Delete this task</string>
+
+    <!-- Saisie d'un rendez-vous -->
+    <string name="tous_les">Every</string>
+    <plurals name="unite_semaine">
+        <item quantity="one">week</item>
+        <item quantity="other">weeks</item>
+    </plurals>
+    <plurals name="unite_mois">
+        <item quantity="one">month</item>
+        <item quantity="other">months</item>
+    </plurals>
+    <plurals name="unite_an">
+        <item quantity="one">year</item>
+        <item quantity="other">years</item>
+    </plurals>
+    <string name="certains_jours">Some days</string>
+    <string name="jour_de_semaine">A weekday</string>
+    <string name="dernier">Last</string>
+    <string name="le_rang">The…</string>
+    <string name="date_annuelle_bouton">%2$s %1$s</string>
+    <string name="a_heure">At %1$s</string>
+    <string name="tenir_le_compte">Keep count of missed ones</string>
+    <string name="tenir_le_compte_explication">Each missed appointment stays to be caught up, oldest first.</string>
+
+    <!-- Détail et historique -->
+    <string name="voir_historique">See history</string>
+    <string name="historique">History</string>
+    <string name="ajouter_accomplissement">Add a completion</string>
+    <string name="jamais_faite_pour_l_instant">Never done yet.</string>
+    <string name="modifier_la_date">Change date…</string>
+    <string name="accomplissement_retire">Completion removed</string>
+    <string name="accomplissement_ajoute">Completion added</string>
+    <string name="date_corrigee">Date corrected</string>
+    <string name="message_et_echeance">%1$s · due %2$s</string>
+    <string name="aide_historique_ricochet">Tap a row to change its date or remove it. Gaps are measured with the current period: %1$s.</string>
+    <string name="aide_historique_rendez_vous">Tap a row to change its date or remove it. Gaps are measured with the current calendar: %1$s.</string>
+
+    <!-- Calendrier -->
+    <string name="aujourd_hui">Today</string>
+    <string name="demain">Tomorrow</string>
+    <string name="hier">Yesterday</string>
+    <string name="rien_ce_jour">Nothing that day.</string>
+    <string name="marque_projection">Around %1$s, if done on time</string>
+    <string name="marque_fait">Done at %1$s</string>
+    <string name="marque_retard">Overdue · due %1$s at %2$s</string>
+    <string name="jour_complet">%1$s, %3$s %2$s</string>
+
+    <!-- Échéances et durées -->
+    <string name="dans">In %1$s</string>
+    <string name="a_faire_maintenant">Due now</string>
+    <string name="en_retard_de">%1$s overdue</string>
+    <string name="en_avance_de">%1$s early</string>
+    <string name="a_l_heure">On time</string>
+    <string name="moins_d_une_minute">less than a minute</string>
+    <plurals name="duree_jours">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="duree_heures">
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+    <plurals name="duree_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <string name="echeance_jamais_faite">%1$s · never done</string>
+    <string name="jamais_faite">Never done</string>
+    <string name="faite_il_y_a">Done %1$s ago</string>
+    <plurals name="periode_heures">
+        <item quantity="one">Every hour</item>
+        <item quantity="other">Every %d hours</item>
+    </plurals>
+    <plurals name="periode_jours">
+        <item quantity="one">Every day</item>
+        <item quantity="other">Every %d days</item>
+    </plurals>
+    <plurals name="periode_semaines">
+        <item quantity="one">Every week</item>
+        <item quantity="other">Every %d weeks</item>
+    </plurals>
+    <string name="motif_date_historique">EEEE, MMMM d, yyyy \'at\' HH:mm</string>
+
+    <!-- Les rendez-vous en mots -->
+    <string name="chaque_jour_a">Every day at %1$s</string>
+    <string name="rythme_rendez_vous">%1$s on %2$s at %3$s</string>
+    <plurals name="cadence_semaines">
+        <item quantity="one">Every week</item>
+        <item quantity="other">Every %d weeks</item>
+    </plurals>
+    <plurals name="cadence_mois">
+        <item quantity="one">Every month</item>
+        <item quantity="other">Every %d months</item>
+    </plurals>
+    <plurals name="cadence_ans">
+        <item quantity="one">Every year</item>
+        <item quantity="other">Every %d years</item>
+    </plurals>
+    <string name="jour_de_la_semaine">%1$s</string>
+    <string name="le_dernier_jour">the last day</string>
+    <plurals name="jour_du_mois">
+        <item quantity="one">day %d</item>
+        <item quantity="other">day %d</item>
+    </plurals>
+    <string name="rang_1">first</string>
+    <string name="rang_2">second</string>
+    <string name="rang_3">third</string>
+    <string name="rang_4">fourth</string>
+    <string name="rang_dernier">last</string>
+    <string name="position">the %1$s %2$s</string>
+    <string name="date_annuelle">%2$s %1$s</string>
+    <plurals name="numero_jour">
+        <item quantity="one">%d</item>
+        <item quantity="other">%d</item>
+    </plurals>
+    <string name="liste_et">%1$s and %2$s</string>
+    <string name="heure_pile">%1$d:00</string>
+    <string name="heure_minutes">%1$d:%2$02d</string>
+    <string name="date_courte">%2$s %1$s</string>
+    <string name="date_courte_jour">%1$s, %3$s %2$s</string>
+    <string name="echeance_et_date">%1$s · %2$s</string>
+    <string name="echeance_depuis">%1$s · since %2$s</string>
+    <plurals name="oublis">
+        <item quantity="one">%d missed</item>
+        <item quantity="other">%d missed</item>
+    </plurals>
+    <string name="avant_ce_calendrier">Before this calendar</string>
+    <string name="pour_le">For %1$s · %2$s</string>
+
+    <!-- Notifications -->
+    <string name="canal_nom">Due dates</string>
+    <string name="canal_description">Reminders for tasks that are due.</string>
+    <string name="resume_texte">Some tasks are due.</string>
+</resources>
