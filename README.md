@@ -53,9 +53,14 @@ needs no access to your storage or camera.
 
 Requires **Android 14** or later.
 
-Ricochet will be available on [IzzyOnDroid](https://apt.izzysoft.de/fdroid/) and
-[F-Droid](https://f-droid.org/), and as an APK in this repository's
-[releases](../../releases).
+Download the APK from this repository's [releases](../../releases), or let
+[Obtainium](https://github.com/ImranR98/Obtainium) install it and keep it up to
+date: add `https://github.com/Ginko-Aloe/Ricochet` as an app source.
+
+Releases are signed with a certificate whose SHA-256 fingerprint is
+`3d34cbf829ce12e0524fa111d9cb5188176ee94a60ebe5a655a400b2a800bdec`.
+The build is reproducible: built from a release tag, the APK matches the published
+one once the signature is copied.
 
 ## Build
 
@@ -87,6 +92,13 @@ the task's name. Ricochet generalises them to any chore and adds fixed-date
 appointments, but the visual idea is Water Me’s — thank you.
 
 No code was copied from Water Me; both apps are released under the GPL.
+
+## How it was made
+
+Ricochet's code was written with an AI model, Claude (Anthropic). Its author
+decided what the app does and how it behaves, rule by rule, and tested each feature
+on a device; the code itself was produced by the model, and checked by unit tests and
+code reviews. Commits made this way say so with a `Co-Authored-By: Claude` line.
 
 ## License
 

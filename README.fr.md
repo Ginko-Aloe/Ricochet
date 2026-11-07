@@ -57,9 +57,14 @@ ni au stockage ni à la caméra.
 
 Nécessite **Android 14** ou plus récent.
 
-Ricochet sera disponible sur [IzzyOnDroid](https://apt.izzysoft.de/fdroid/) et
-[F-Droid](https://f-droid.org/), et en APK dans les
-[versions publiées](../../releases) de ce dépôt.
+Télécharger l'APK dans les [versions publiées](../../releases) de ce dépôt, ou
+laisser [Obtainium](https://github.com/ImranR98/Obtainium) l'installer et le tenir
+à jour : ajouter `https://github.com/Ginko-Aloe/Ricochet` comme source.
+
+Les versions sont signées d'un certificat dont l'empreinte SHA-256 est
+`3d34cbf829ce12e0524fa111d9cb5188176ee94a60ebe5a655a400b2a800bdec`.
+La construction est reproductible : construit depuis le tag d'une version, l'APK est
+identique à celui publié, une fois la signature recopiée.
 
 ## Construire
 
@@ -92,6 +97,14 @@ ajoute les rendez-vous, mais l'idée visuelle est celle de Water Me — merci.
 
 Aucun code n'a été repris de Water Me ; les deux applications sont publiées sous
 GPL.
+
+## Comment elle a été faite
+
+Le code de Ricochet a été écrit avec un modèle d'IA, Claude (Anthropic). Son auteur
+a décidé de ce que fait l'application et de son comportement, règle par règle, et a
+testé chaque fonction sur un appareil ; le code lui-même a été produit par le modèle,
+et vérifié par des tests unitaires et des revues de code. Les commits faits ainsi le
+signalent par une ligne `Co-Authored-By: Claude`.
 
 ## Licence
 
