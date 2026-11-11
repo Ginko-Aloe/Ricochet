@@ -44,6 +44,8 @@ Sunday — Ricochet also does **appointments**.
 - **Exact-time notifications** with a *Done* action and a snooze, so you rarely need
   to open the app. The snooze lasts an eighth of the period, between 15 minutes and
   12 hours.
+- **A morning summary**, if you turn it on: at the time of your choice, one
+  notification lists what is overdue and what is due today.
 - **Backup** as a zip archive of tasks and photos, saved wherever you choose, and an
   **export of the history as CSV**.
 - **English and French**, following your phone's language — or chosen for Ricochet

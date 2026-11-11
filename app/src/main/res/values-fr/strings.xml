@@ -213,4 +213,23 @@
     <string name="canal_nom">Échéances</string>
     <string name="canal_description">Rappels des tâches arrivées à échéance.</string>
     <string name="resume_texte">Des tâches sont à faire.</string>
+
+    <!-- Rappel du matin -->
+    <string name="rappel_du_matin_menu">Rappel du matin…</string>
+    <string name="rappel_du_matin">Rappel du matin</string>
+    <string name="rappel_du_matin_explication">Chaque matin, une notification liste les tâches en retard et celles du jour. Chaque tâche reste rappelée à son heure.</string>
+    <string name="activer">Activer</string>
+    <string name="canal_matin_nom">Rappel du matin</string>
+    <string name="canal_matin_description">Les tâches de la journée, chaque matin.</string>
+    <plurals name="taches_du_jour">
+        <item quantity="one">%d tâche aujourd\'hui</item>
+        <item quantity="many">%d tâches aujourd\'hui</item>
+        <item quantity="other">%d tâches aujourd\'hui</item>
+    </plurals>
+    <string name="ligne_du_jour">%1$s · %2$s</string>
+    <plurals name="puis_encore">
+        <item quantity="one">%1$s, puis encore une fois</item>
+        <item quantity="many">%1$s, puis encore %2$d fois</item>
+        <item quantity="other">%1$s, puis encore %2$d fois</item>
+    </plurals>
 </resources>

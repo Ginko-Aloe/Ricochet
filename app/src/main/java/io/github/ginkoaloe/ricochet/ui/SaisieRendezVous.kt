@@ -179,7 +179,7 @@ private fun <T> Set<T>.basculer(element: T): Set<T> = if (element in this) this 
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-private fun ChoixHeure(initiale: LocalTime, onChoisi: (LocalTime) -> Unit, onAbandon: () -> Unit) {
+internal fun ChoixHeure(initiale: LocalTime, onChoisi: (LocalTime) -> Unit, onAbandon: () -> Unit) {
     val etat = rememberTimePickerState(initialHour = initiale.hour, initialMinute = initiale.minute, is24Hour = true)
     AlertDialog(
         onDismissRequest = onAbandon,

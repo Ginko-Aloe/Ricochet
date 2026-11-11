@@ -20,6 +20,14 @@ import kotlin.time.toJavaDuration
 class RecepteurRappel : BroadcastReceiver() {
 
     override fun onReceive(contexte: Context, intention: Intent) {
+        // Le rappel du matin ne vise aucune tache : il les passe toutes en revue, puis
+        // se repose pour le lendemain.
+        if (intention.action == ACTION_MATIN) {
+            RappelDuMatin.notifier(contexte)
+            RappelDuMatin.planifier(contexte)
+            return
+        }
+
         val id = intention.getStringExtra(EXTRA_ID) ?: return
         val depot = depotTaches(contexte)
         val taches = depot.charger()
@@ -58,6 +66,7 @@ class RecepteurRappel : BroadcastReceiver() {
         const val ACTION_ECHEANCE = "io.github.ginkoaloe.ricochet.ECHEANCE"
         const val ACTION_FAIT = "io.github.ginkoaloe.ricochet.FAIT"
         const val ACTION_REPORT = "io.github.ginkoaloe.ricochet.REPORT"
+        const val ACTION_MATIN = "io.github.ginkoaloe.ricochet.MATIN"
         const val EXTRA_ID = "idTache"
     }
 }

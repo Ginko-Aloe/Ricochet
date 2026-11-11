@@ -26,7 +26,10 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
 import io.github.ginkoaloe.ricochet.domaine.Tache
 import io.github.ginkoaloe.ricochet.donnees.historiqueEnCsv
+import io.github.ginkoaloe.ricochet.donnees.reglages
+import io.github.ginkoaloe.ricochet.rappels.RappelDuMatin
 import io.github.ginkoaloe.ricochet.rappels.Rappels
+import io.github.ginkoaloe.ricochet.ui.DialogueRappelDuMatin
 import io.github.ginkoaloe.ricochet.ui.EcranCalendrier
 import io.github.ginkoaloe.ricochet.ui.EcranDetail
 import io.github.ginkoaloe.ricochet.ui.EcranEdition
@@ -43,6 +46,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         Rappels.creerCanal(this)
+        // Les alarmes se perdent quand on force l'arret de l'application : chaque
+        // ouverture repose donc celle du matin. Sans effet si le rappel est coupe.
+        RappelDuMatin.planifier(this)
 
         setContent {
             RicochetTheme {
@@ -108,6 +114,22 @@ private fun Application(etat: EtatTaches) {
         mutableStateOf(!preferences.getBoolean(INDICE_BALAYAGE_VU, false))
     }
 
+    val reglages = remember { reglages(contexte) }
+    var regleRappelDuMatin by remember { mutableStateOf(false) }
+    if (regleRappelDuMatin) {
+        DialogueRappelDuMatin(
+            actif = reglages.rappelDuMatin,
+            heure = reglages.heureDuMatin,
+            onValider = { actif, heure ->
+                reglages.rappelDuMatin = actif
+                reglages.heureDuMatin = heure
+                RappelDuMatin.planifier(contexte)
+                regleRappelDuMatin = false
+            },
+            onAbandon = { regleRappelDuMatin = false },
+        )
+    }
+
     // L'utilisateur choisit lui-meme ou poser son archive, et laquelle relire :
     // aucune permission de stockage n'est alors necessaire, et la sauvegarde ne
     // disparait pas avec l'application comme celle de WaterMe.
@@ -157,6 +179,7 @@ private fun Application(etat: EtatTaches) {
                 onImporter = { importer.launch(arrayOf("application/zip", "*/*")) },
                 onExporterCsv = { exporterCsv.launch("ricochet-historique-${LocalDate.now()}.csv") },
                 onCalendrier = { navigation.navigate(VersCalendrier) },
+                onRappelDuMatin = { regleRappelDuMatin = true },
                 dernierImport = etat.dernierImport,
                 onAnnulerImport = {
                     contexte.annoncer(

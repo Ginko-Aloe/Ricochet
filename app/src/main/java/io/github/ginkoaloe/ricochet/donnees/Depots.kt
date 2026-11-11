@@ -10,3 +10,5 @@ import java.io.File
 fun depotTaches(contexte: Context) = DepotTaches(File(contexte.filesDir, "taches.json"))
 
 fun depotImages(contexte: Context) = DepotImages(File(contexte.filesDir, "images"))
+
+fun reglages(contexte: Context) = Reglages(contexte.getSharedPreferences("reglages", Context.MODE_PRIVATE))

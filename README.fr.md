@@ -47,6 +47,8 @@ dimanche sur deux — Ricochet fait aussi des **rendez-vous**.
 - **Des notifications à l'heure exacte** avec une action *Fait* et un report :
   on ouvre rarement l'application. Le report dure un huitième de la période, entre
   15 minutes et 12 heures.
+- **Un rappel du matin**, si on l'active : à l'heure choisie, une notification
+  liste ce qui est en retard et ce qui tombe dans la journée.
 - **Sauvegarde** dans une archive zip des tâches et de leurs photos, rangée où l'on
   veut, et **export de l'historique en CSV**.
 - **Français et anglais**, selon la langue du téléphone — ou choisie pour Ricochet

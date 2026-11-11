@@ -29,6 +29,7 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -95,6 +96,7 @@ fun EcranListe(
     modifier: Modifier = Modifier,
     onExporterCsv: () -> Unit = {},
     onCalendrier: () -> Unit = {},
+    onRappelDuMatin: () -> Unit = {},
     dernierImport: Instant? = null,
     onAnnulerImport: () -> Unit = {},
     montrerIndiceBalayage: Boolean = false,
@@ -181,6 +183,13 @@ fun EcranListe(
                                 onClick = { menuOuvert = false; confirmerAnnulationImport = true },
                             )
                         }
+                        // Un reglage plutot qu'une donnee, mais un ecran de reglages
+                        // pour lui seul serait bien vide : il se range a la fin du menu.
+                        HorizontalDivider()
+                        DropdownMenuItem(
+                            text = { Text(stringResource(R.string.rappel_du_matin_menu)) },
+                            onClick = { menuOuvert = false; onRappelDuMatin() },
+                        )
                     }
                 },
             )

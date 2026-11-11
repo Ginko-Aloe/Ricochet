@@ -21,6 +21,7 @@ class RecepteurDemarrage : BroadcastReceiver() {
         val maintenant = Instant.now()
 
         Planificateur(contexte).replanifier(taches, maintenant)
+        RappelDuMatin.planifier(contexte, maintenant)
         taches.filter { it.estDue(maintenant) }
             .forEach { Rappels.notifier(contexte, it, maintenant) }
     }

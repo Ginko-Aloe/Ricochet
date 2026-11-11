@@ -197,4 +197,21 @@
     <string name="canal_nom">Due dates</string>
     <string name="canal_description">Reminders for tasks that are due.</string>
     <string name="resume_texte">Some tasks are due.</string>
+
+    <!-- Rappel du matin -->
+    <string name="rappel_du_matin_menu">Morning summary…</string>
+    <string name="rappel_du_matin">Morning summary</string>
+    <string name="rappel_du_matin_explication">Each morning, a notification lists the overdue tasks and those due today. Each task is still reminded at its own time.</string>
+    <string name="activer">Turn on</string>
+    <string name="canal_matin_nom">Morning summary</string>
+    <string name="canal_matin_description">The day\'s tasks, each morning.</string>
+    <plurals name="taches_du_jour">
+        <item quantity="one">%d task today</item>
+        <item quantity="other">%d tasks today</item>
+    </plurals>
+    <string name="ligne_du_jour">%1$s · %2$s</string>
+    <plurals name="puis_encore">
+        <item quantity="one">%1$s, then once more</item>
+        <item quantity="other">%1$s, then %2$d more times</item>
+    </plurals>
 </resources>
