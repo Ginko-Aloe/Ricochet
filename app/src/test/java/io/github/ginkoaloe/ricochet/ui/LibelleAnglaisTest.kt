@@ -37,7 +37,7 @@ class LibelleAnglaisTest {
     @Test
     fun `les echeances`() {
         assertEquals("In 3 days", EtatEcheance.AVenir(3.days).libelle(en))
-        assertEquals("In 1 day", EtatEcheance.AVenir(1.days).libelle(en))
+        assertEquals("Tomorrow", EtatEcheance.AVenir(1.days).libelle(en))
         assertEquals("2 days overdue", EtatEcheance.EnRetard(2.days).libelle(en))
         assertEquals("Due now", EtatEcheance.EnRetard(30.seconds).libelle(en))
     }

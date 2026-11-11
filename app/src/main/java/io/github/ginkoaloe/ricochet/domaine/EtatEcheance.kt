@@ -1,6 +1,8 @@
 package io.github.ginkoaloe.ricochet.domaine
 
 import java.time.Instant
+import java.time.ZoneId
+import java.time.temporal.ChronoUnit
 import kotlin.time.Duration
 
 /**
@@ -16,18 +18,31 @@ import kotlin.time.Duration
  */
 sealed interface EtatEcheance {
 
-    /** Pas encore due. [dans] est strictement positif. */
-    data class AVenir(val dans: Duration) : EtatEcheance
+    /**
+     * Pas encore due. [dans] est strictement positif.
+     *
+     * [jours] compte les **jours du calendrier** jusqu'a l'echeance : 0 si elle tombe
+     * aujourd'hui, 1 si c'est demain, meme a 23 h pour 1 h du matin. C'est ce qu'on
+     * affiche des le lendemain — compte en heures, « dans 3 jours » devenait « dans
+     * 2 jours » entre deux ouvertures de l'application le meme jour. Par defaut, a
+     * defaut de calendrier, les jours pleins de [dans].
+     */
+    data class AVenir(val dans: Duration, val jours: Int = dans.inWholeDays.toInt()) : EtatEcheance
 
     /** Due ou depassee. [depuis] vaut zero a l'instant precis de l'echeance. */
     data class EnRetard(val depuis: Duration) : EtatEcheance
 }
 
-/** L'etat de cette tache a l'instant [maintenant]. */
-fun Tache.etatEcheance(maintenant: Instant): EtatEcheance {
+/**
+ * L'etat de cette tache a l'instant [maintenant]. Les jours se comptent dans [zone],
+ * celle du telephone : « demain » est celui de l'utilisateur, pas celui du calendrier
+ * d'un Rendez-vous.
+ */
+fun Tache.etatEcheance(maintenant: Instant, zone: ZoneId = ZoneId.systemDefault()): EtatEcheance {
     val restant = tempsRestant(maintenant)
-    return if (restant.isPositive()) EtatEcheance.AVenir(restant)
-    else EtatEcheance.EnRetard(-restant)
+    if (!restant.isPositive()) return EtatEcheance.EnRetard(-restant)
+    val jours = ChronoUnit.DAYS.between(maintenant.atZone(zone).toLocalDate(), echeance.atZone(zone).toLocalDate())
+    return EtatEcheance.AVenir(restant, jours.toInt())
 }
 
 /**

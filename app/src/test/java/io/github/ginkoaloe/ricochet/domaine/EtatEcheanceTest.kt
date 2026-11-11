@@ -2,6 +2,8 @@ package io.github.ginkoaloe.ricochet.domaine
 
 import org.junit.Test
 import java.time.Instant
+import java.time.LocalDateTime
+import java.time.ZoneId
 import kotlin.test.assertEquals
 import kotlin.time.Duration
 import kotlin.time.Duration.Companion.days
@@ -55,6 +57,43 @@ class EtatEcheanceTest {
             EtatEcheance.EnRetard(1.days),
             t.etatEcheance(lundiMidi.plus(8.days.toJavaDuration())),
         )
+    }
+
+    // ------------------------------------------------- les jours du calendrier
+
+    private val paris: ZoneId = ZoneId.of("Europe/Paris")
+
+    private fun le(texte: String): Instant = LocalDateTime.parse(texte).atZone(paris).toInstant()
+
+    /**
+     * Le cas qui a motive le compte au calendrier : vue le matin puis le soir du meme
+     * jour, une tache due dans trois jours ne passe pas a deux.
+     */
+    @Test
+    fun `les jours restants ne changent pas au fil de la journee`() {
+        val t = Tache("Arroser", 3.days, historique = listOf(le("2026-11-02T18:00")), creee = lundiMidi)
+
+        assertEquals(3, (t.etatEcheance(le("2026-11-02T19:00"), paris) as EtatEcheance.AVenir).jours)
+        assertEquals(2, (t.etatEcheance(le("2026-11-03T08:00"), paris) as EtatEcheance.AVenir).jours)
+        assertEquals(2, (t.etatEcheance(le("2026-11-03T23:00"), paris) as EtatEcheance.AVenir).jours)
+    }
+
+    /** Due a 1 h du matin, vue a 23 h : c'est demain, meme a deux heures de la. */
+    @Test
+    fun `une echeance apres minuit tombe demain`() {
+        val t = Tache("Pilule", 8.hours, historique = listOf(le("2026-11-02T17:00")), creee = lundiMidi)
+
+        val etat = t.etatEcheance(le("2026-11-02T23:00"), paris) as EtatEcheance.AVenir
+
+        assertEquals(1, etat.jours)
+        assertEquals(2.hours, etat.dans)
+    }
+
+    @Test
+    fun `une echeance du jour compte zero jour`() {
+        val t = Tache("Pilule", 8.hours, historique = listOf(le("2026-11-02T08:00")), creee = lundiMidi)
+
+        assertEquals(0, (t.etatEcheance(le("2026-11-02T09:00"), paris) as EtatEcheance.AVenir).jours)
     }
 
     // -------------------------------------------------------------------- le tri

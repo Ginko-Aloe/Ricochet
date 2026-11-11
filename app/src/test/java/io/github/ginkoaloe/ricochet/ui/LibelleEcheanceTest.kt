@@ -41,10 +41,31 @@ class LibelleEcheanceTest {
 
     @Test
     fun `le singulier et le pluriel sont respectes`() {
-        assertEquals("Dans 1 jour", EtatEcheance.AVenir(1.days).libelle(fr))
         assertEquals("Dans 2 jours", EtatEcheance.AVenir(2.days).libelle(fr))
         assertEquals("Dans 1 heure", EtatEcheance.AVenir(1.hours).libelle(fr))
         assertEquals("Dans 1 minute", EtatEcheance.AVenir(1.minutes).libelle(fr))
+    }
+
+    // ------------------------------------------------- les jours du calendrier
+
+    /** Le lendemain se dit « demain », quelle que soit l'heure. */
+    @Test
+    fun `le lendemain se dit demain`() {
+        assertEquals("Demain", EtatEcheance.AVenir(2.hours, jours = 1).libelle(fr))
+        assertEquals("Demain", EtatEcheance.AVenir(47.hours, jours = 1).libelle(fr))
+    }
+
+    /** Ce sont les jours du calendrier qui comptent, pas les heures restantes. */
+    @Test
+    fun `au-dela, les jours se comptent au calendrier`() {
+        assertEquals("Dans 3 jours", EtatEcheance.AVenir((2.days + 1.hours), jours = 3).libelle(fr))
+        assertEquals("Dans 2 jours", EtatEcheance.AVenir((2.days + 23.hours), jours = 2).libelle(fr))
+    }
+
+    /** Le jour meme, les heures et les minutes restent : elles changent vraiment. */
+    @Test
+    fun `le jour meme, le decompte reste en heures`() {
+        assertEquals("Dans 5 heures", EtatEcheance.AVenir(5.hours, jours = 0).libelle(fr))
     }
 
     @Test

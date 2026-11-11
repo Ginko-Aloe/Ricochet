@@ -15,7 +15,12 @@ import kotlin.time.Duration
  * tests verifient les vrais fichiers de traduction.
  */
 fun EtatEcheance.libelle(t: Textes): String = when (this) {
-    is EtatEcheance.AVenir -> t.texte(R.string.dans, duree(t, dans))
+    // Des le lendemain, en jours du calendrier : le libelle ne bouge plus de la journee.
+    is EtatEcheance.AVenir -> when {
+        jours == 1 -> t.texte(R.string.demain)
+        jours > 1 -> t.texte(R.string.dans, t.pluriel(R.plurals.duree_jours, jours, jours))
+        else -> t.texte(R.string.dans, duree(t, dans))
+    }
     is EtatEcheance.EnRetard ->
         // En deca de la minute, annoncer un retard serait pedant : c'est maintenant.
         if (depuis.inWholeMinutes < 1) t.texte(R.string.a_faire_maintenant)
