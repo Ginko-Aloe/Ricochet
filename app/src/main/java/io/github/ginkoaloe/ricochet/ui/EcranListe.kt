@@ -239,7 +239,10 @@ private fun LigneBalayable(
     montrerIndice: Boolean = false,
     onIndiceMontre: () -> Unit = {},
 ) {
-    val balayage = rememberSwipeToDismissBoxState()
+    // Le seuil par defaut, 56 dp, se franchit en faisant defiler la liste : un pouce
+    // qui remonte en biais traverse la carte sans le vouloir. Il faut ici un geste
+    // franc, sur plus d'un tiers de la largeur.
+    val balayage = rememberSwipeToDismissBoxState(positionalThreshold = { largeur -> largeur * SEUIL_BALAYAGE })
     // Une portee qui survit aux changements d'etat du balayage : attachee a
     // celui-ci, l'animation de remise en place serait annulee en plein vol.
     val portee = rememberCoroutineScope()
@@ -277,6 +280,10 @@ private fun LigneBalayable(
         state = balayage,
         modifier = modifier,
         backgroundContent = { FondDeBalayage() },
+        // Vers la droite seulement : c'est le sens que montrent l'indice et le fond.
+        // Le pouce droit qui fait defiler la liste derive, lui, vers la gauche — un
+        // balayage dans ce sens accomplissait la tache sous le doigt.
+        enableDismissFromEndToStart = false,
         onDismiss = surBalayage,
     ) {
         CarteTache(
@@ -287,6 +294,9 @@ private fun LigneBalayable(
         )
     }
 }
+
+/** La part de la largeur de la carte qu'un balayage lent doit parcourir pour accomplir. */
+private const val SEUIL_BALAYAGE = 0.4f
 
 /** Ce qu'on decouvre sous la carte pendant le geste : ce qui va se passer. */
 @Composable
